@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -23,11 +24,8 @@ const Header = () => {
       <nav className="container mx-auto container-padding">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg gradient-accent flex items-center justify-center">
-              <span className="text-accent-foreground font-display font-bold text-xl">D</span>
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">Devmithra</span>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Devmithra" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
