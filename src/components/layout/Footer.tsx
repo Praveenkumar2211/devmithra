@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,11 +30,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">D</span>
-              </div>
-              <span className="font-display font-bold text-xl">Devmithra</span>
+            <Link to="/" className="flex items-center mb-6">
+              <img src={logo} alt="Devmithra" className="h-10 w-auto" />
             </Link>
             <p className="text-primary-foreground/70 mb-6 max-w-sm leading-relaxed">
               Transforming ideas into powerful digital solutions. Your trusted partner for innovative software development and IT services.
