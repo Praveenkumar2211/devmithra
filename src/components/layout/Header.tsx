@@ -23,9 +23,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <nav className="container mx-auto container-padding">
         <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Filter applied to make white text black but keep red icon red */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Devmithra" className="h-10 w-auto" />
+            <img
+              src={logo}
+              alt="Devmithra"
+              className="h-10 w-auto [filter:invert(1)_hue-rotate(180deg)_brightness(0.8)_contrast(1.2)]"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -64,7 +68,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in">
+          <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background/95 backdrop-blur-md absolute left-0 right-0 px-4 shadow-xl">
             <div className="flex flex-col gap-2">
               {navigation.map((item) => (
                 <Link
